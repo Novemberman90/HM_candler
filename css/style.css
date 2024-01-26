@@ -11,7 +11,7 @@ html{
 body {
     color: #000;
     font-family: 'Comfortaa', sans-serif;
-    /* font-family: 'Yeseva One', serif; */
+   
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -26,6 +26,13 @@ a {
 ul {
     list-style: none;
 }
+
+button {
+    border:none;
+    padding: 0;
+    border-radius: 0;
+    cursor: pointer;
+}
 .container {
     max-width: 1180px;
     padding: 0 10px;
@@ -39,12 +46,9 @@ ul {
 
 .menu__btn {
     display: none;
+    background-color: transparent;
     width: 30px;
     height: 25px;
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -82,6 +86,42 @@ ul {
     left: -23px;
     top: -3px;
 }
+.main {
+    background-color: #FFF8F3;
+    overflow-x: clip; /* Картинка будет подрезатся, чтобы избежать срокла */
+}
+
+.top {
+    padding: 40px 0 150px;
+}
+.top__inner {
+    position: relative;
+}
+.top__content {
+    width: 370px;
+    padding: 150px 0 250px;
+}
+.top__title {
+    font-family: 'Yeseva One', serif;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.top__text {
+    margin-bottom: 48px;
+}
+.top__buy {
+    padding: 18px 54px;
+    background-color: #FFBD59;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.top__img {
+    position: absolute;
+    top: 0;
+    left: 240px;
+}
 
 .footer {
     padding: 40px 0px 35px 0px;
@@ -110,11 +150,30 @@ ul {
 
 
 
+
+
+
+
+
 @media (max-width:1000px) {
     .container {
         padding-left: 20px;
         padding-right: 20px;
     }
+    .top__content {
+        width: 333px;
+        padding: 90px 0 70px;
+    }
+    .top__text {
+        margin-bottom: 30px;
+      }
+    .top__img {
+        left: 300px;
+    }
+    .top__img-L {
+        width: 665px;
+    }
+
 }
 
 @media (max-width:900px) {
@@ -139,6 +198,20 @@ ul {
   }
   .container {
     max-width: 640px;
+  }
+  .top__content {
+    width: 230px;
+  }
+  .top__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .top__text {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+  .top__img {
+    left: 180px;
   }
 
   .phone::before {
@@ -197,4 +270,49 @@ ul {
         padding: 50px 0;
         font-size: 14px;
     }
+}
+
+@media (max-width:480px) {
+    .top {
+        padding: 30px 0 50px;
+    }
+    .top__img-L {
+        width: 309px;
+        left: 167px;
+    }
+    .top__content {
+        width: 180px;
+      }
+      .top__title {
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+      .top__text {
+        font-size: 8px;
+        margin-bottom: 15px;
+      }
+      .top__buy {
+        font-size: 10px;
+        padding: 14px 41px;
+      }
+}
+
+@media (max-width:360px) {
+    .top__img-L {
+        width: 185px;
+    }
+    .top__img{
+        left: auto;
+        right: 0;
+    }
+    .top__content {
+        width: 200px;
+        padding: 20px 0 0;
+      }
+      .top__title {
+        font-size: 18px;
+      }
+      .top__text {
+        font-size: 10px;
+      }
 }
