@@ -534,6 +534,16 @@ button {
         margin: 0 auto 30px;
         width: 300px;
       }
+      .products__content {
+        gap: 30px 10px;
+    }
+    .products__item {
+        width: 170px;
+    }
+    .productc__item-img {
+        width: 170px;
+        margin-bottom: 6px;
+    }
 }
 
 @media (max-width:360px) {
