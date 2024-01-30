@@ -483,6 +483,7 @@ button {
     }
     .button {
         padding: 10px 26px;
+        font-size: 10px;
     }
 }
 
