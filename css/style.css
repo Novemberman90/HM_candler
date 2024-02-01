@@ -420,10 +420,111 @@ button {
     bottom: 60px;
     text-align: left;
 }
+.accordeon {
 
+}
+.accordeon__item {
+    background-color: #fafafa;
+    margin-bottom: 10px;
+}
+.accordeon__title {
+    font-family: 'Yeseva One', serif;
+    font-size: 16px;
+    display: block;/* потому, что button */
+    background-color: transparent;
+    padding: 16px 50px 16px 13px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+}
 
+.accordeon__title::after {
+    content: '';
+    background-image: url(../images/arrow.svg);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 26px;
+    top: 17px;
+}
+.accordeon__title.accordeon__title--active::after {
+    transform: rotate(180deg);
+}
+.accordeon__text {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity .3s, max-height .3s; /* задвал изначально по опасити и по высоте */
+}
 
+.accordeon__text ol {
+    padding: 20px 40px;
+}
+.accordeon__text.accordeon__text--visible {
+    opacity: 1;
+}
 
+.promo {
+    background-image:url(../images/promo.jpg);
+    padding: 140px 0;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.promo__inner {
+    display: flex;
+    align-items:center;
+}
+.promo__text {
+    font-family: 'Yeseva One', serif;
+    font-size: 40px;
+    color: #FFF;
+    padding-left: 56px;
+    max-width: 765px;
+    margin-right: 110px;
+}
+.promo__link {
+    color: #272727;
+    background-color: #FFBD59;
+    display: inline-block;
+    padding: 14px 25px 12px;
+    min-width: 135px;
+    text-align: center;
+}
+.contacts {
+    padding: 150px 0 50px;
+}
+.contacts__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.form {
+    background-color: #FFF;
+    width: 664px;
+    padding: 75px 42px 67px;
+}
+.form__title {
+    font-family: 'Yeseva One', serif;
+    margin-bottom: 60px;
+    font-size: 40px;
+}
+.form__input {
+    background-color: #FFF;
+    border: none;
+    border-bottom: 1px solid black ;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    padding: 7px 10px;
+    color: black;
+}
+.form__input::placeholder {
+    color: #B3B3B3;
+    font-family: 'Comfortaa', sans-serif;; /* для Инпута надо указывать инче не тянет */
+    font-size: 14px; /* для Инпута надо указывать инче не тянет */
+    font-style: normal; /* для Инпута надо указывать инче не тянет */
+    font-weight: 400; /* для Инпута надо указывать инче не тянет */
+}
 .footer {
     padding: 40px 0px 35px 0px;
 }
@@ -448,8 +549,14 @@ button {
     display: flex;
     gap: 15px;
 }
-
-
+.form__btn {
+    background-color: #FFBD59;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 14px;
+    color:#272727;
+    padding: 17px 34px;
+    margin-top: 36px; /* потому, что у верхего маргин ботом 14, а по макету надо соблюдать 50 */
+}
 
 @media (max-width:1050px) {
     .steps__list {
@@ -539,6 +646,13 @@ button {
     }
     .certificates__content .swiper-pagination {
         text-align: center;
+    }
+    .promo__text {
+        padding-left: 0;
+    }
+
+    .contacts__img {
+        width: 335px;
     }
 }
 
@@ -717,6 +831,30 @@ button {
     .feedback__item-content {
         padding-bottom: 45px;
     }
+    .promo {
+        padding: 67px 0;
+    }
+    .promo__link {
+        font-size: 12px;
+    }
+    .promo__text {
+        font-size: 15px;
+    }
+    .contacts__img {
+        width: 187px;
+        object-fit: cover;
+    }
+    .form {
+        width: 440px;
+        padding: 30px 22px;
+    }
+    .form__title {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .form__btn {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width:640px){
@@ -861,8 +999,18 @@ button {
         width: 415px;
         margin: 0 auto;
     }
-    
-    
+    .promo {
+        padding: 42px 0;
+    }
+    .contacts {
+        padding-top: 50px;
+    }
+    .contacts__img {
+        display: none; /* заменить через тег Пикчер */
+    }
+    .form__input::placeholder {
+        font-size: 10px;
+    }
 }
 @media (max-width:404px) {
     .steps__list  {
@@ -992,5 +1140,8 @@ button {
       }
       .certificates__slider {
         width: 200px;
+    }
+    .promo__text {
+        margin-right: 50px;
     }
 }
