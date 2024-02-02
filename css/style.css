@@ -992,6 +992,27 @@ button {
     .team {
         margin-bottom: 50px;
     }
+    .feedback__slider {
+        width: 427px;
+    }
+    .feedback__item {
+        gap: 0 10px;
+        align-items: inherit;
+    }
+    .feedback__item-sociallink img {
+        width: 15px;
+        height: 15px;
+    }
+    .feedback__item-name {
+        margin-bottom: 10px;
+    }
+    .feedback__item-text {
+        width: 209px;
+        margin-bottom: 6px;
+    }
+    .feedback__item-btn {
+        right: auto;
+    }
     .certificates__content img {
         width: 200px;
     }
@@ -1042,6 +1063,35 @@ button {
     .team__item-decr {
         font-size: 10px;
     }
+    .feedback__item {
+        grid-template-columns: auto;
+        text-align: center;
+      }
+      .feedback__slider {
+        width: 250px;
+        margin: 0 auto;
+      }
+      .feedback__item-video {
+        width: 250px;
+      }
+      .feedback__item-img {
+        width: 250px;
+        margin: 0 auto 20px;
+      }
+      .feedback__item-text {
+        width: 100%;
+      }
+      .feedback__item-btn {
+        margin: 0 auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 125px;
+        padding: 15px 20px;
+      }
+      .certificates__slider {
+        width: 200px;
+      }
 }
 @media (max-width:360px) {
     body{
@@ -1117,30 +1167,6 @@ button {
       .courses__item img {
         width: 255px;
       }
-      .feedback__item {
-        grid-template-columns: auto;
-        text-align: center;
-      }
-      .feedback__slider {
-        width: 250px;
-        margin: 0 auto;
-      }
-      .feedback__item-video {
-        width: 250px;
-      }
-      .feedback__item-img {
-        width: 250px;
-        margin: 0 auto 20px;
-      }
-      .feedback__item-btn {
-        margin: 0 auto;
-        bottom: 0;
-        left: 0;
-        max-width: 100px;
-      }
-      .certificates__slider {
-        width: 200px;
-    }
     .promo__text {
         margin-right: 50px;
     }
