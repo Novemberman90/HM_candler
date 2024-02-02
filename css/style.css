@@ -420,9 +420,7 @@ button {
     bottom: 60px;
     text-align: left;
 }
-.accordeon {
 
-}
 .accordeon__item {
     background-color: #fafafa;
     margin-bottom: 10px;
@@ -457,6 +455,9 @@ button {
 }
 
 .accordeon__text ol {
+    padding: 20px 40px;
+}
+.accordeon__text ul {
     padding: 20px 40px;
 }
 .accordeon__text.accordeon__text--visible {
